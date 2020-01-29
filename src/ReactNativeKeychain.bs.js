@@ -4,20 +4,20 @@ var Js_dict = require("bs-platform/lib/js/js_dict.js");
 var Js_json = require("bs-platform/lib/js/js_json.js");
 var Belt_Option = require("bs-platform/lib/js/belt_Option.js");
 
-var SecurityLevel = /* module */[];
+var SecurityLevel = { };
 
-var Accessible = /* module */[];
+var Accessible = { };
 
-var AccessControl = /* module */[];
+var AccessControl = { };
 
-var AuthenticationType = /* module */[];
+var AuthenticationType = { };
 
-var BiometryType = /* module */[];
+var BiometryType = { };
 
 function decodeGetGenericPasswordResult(result) {
   var match = Js_json.classify(result);
-  if (typeof match === "number" || match.tag !== 2) {
-    return undefined;
+  if (typeof match === "number" || match.tag !== /* JSONObject */2) {
+    return ;
   } else {
     var dict = match[0];
     var match$1 = Belt_Option.map(Js_dict.get(dict, "service"), Js_json.classify);
@@ -26,15 +26,15 @@ function decodeGetGenericPasswordResult(result) {
     if (match$1 !== undefined) {
       var match$4 = match$1;
       if (typeof match$4 === "number" || match$4.tag || match$2 === undefined) {
-        return undefined;
+        return ;
       } else {
         var match$5 = match$2;
         if (typeof match$5 === "number" || match$5.tag || match$3 === undefined) {
-          return undefined;
+          return ;
         } else {
           var match$6 = match$3;
           if (typeof match$6 === "number" || match$6.tag) {
-            return undefined;
+            return ;
           } else {
             return /* record */[
                     /* service */match$4[0],
@@ -45,7 +45,7 @@ function decodeGetGenericPasswordResult(result) {
         }
       }
     } else {
-      return undefined;
+      return ;
     }
   }
 }
