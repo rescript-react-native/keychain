@@ -15,6 +15,6 @@
       "subdirs": false
     }
   ],
-  "bsc-flags": ["-bs-no-version-header", "-warn-error @a-4"],
+  "bsc-flags": ["-bs-no-version-header", "-warn-error @a", "-w -4"],
   "bs-dependencies": []
 }
