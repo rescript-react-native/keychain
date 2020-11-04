@@ -107,8 +107,7 @@ type getGenericPasswordOptions;
 [@bs.obj]
 external getGenericPasswordOptions:
   (~authenticationPrompt: string=?, ~service: string=?, unit) =>
-  getGenericPasswordOptions =
-  "";
+  getGenericPasswordOptions;
 
 [@bs.module "react-native-keychain"]
 external getGenericPassword: unit => Js.Promise.t(getGenericPasswordResult) =
@@ -137,8 +136,7 @@ external setGenericPasswordOptions:
     ~securityLevel: SecurityLevel.t=?,
     unit
   ) =>
-  setGenericPasswordOptions =
-  "";
+  setGenericPasswordOptions;
 
 [@bs.module "react-native-keychain"]
 external setGenericPassword:
@@ -166,8 +164,7 @@ external setGenericPasswordWithService:
 type resetGenericPasswordOptions;
 [@bs.obj]
 external resetGenericPasswordOptions:
-  (~service: string=?, unit) => resetGenericPasswordOptions =
-  "";
+  (~service: string=?, unit) => resetGenericPasswordOptions;
 
 [@bs.module "react-native-keychain"]
 external resetGenericPassword: unit => Js.Promise.t(bool) =
