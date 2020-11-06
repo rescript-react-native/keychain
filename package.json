@@ -1,7 +1,7 @@
 {
   "name": "@reason-react-native/keychain",
   "version": "3.1.0",
-  "description": "Reason/BuckleScript bindings for react-native-keychain",
+  "description": "ReScript / Reason bindings for react-native-keychain",
   "publishConfig": {
     "access": "public"
   },
@@ -12,6 +12,7 @@
   "repository": "https://github.com/reason-react-native/keychain.git",
   "license": "MIT",
   "keywords": [
+    "rescript",
     "reason",
     "reasonml",
     "bucklescript",

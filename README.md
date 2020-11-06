@@ -4,14 +4,13 @@
 [![Version](https://img.shields.io/npm/v/@reason-react-native/keychain.svg)](https://www.npmjs.com/@reason-react-native/keychain)
 [![Chat](https://img.shields.io/discord/235176658175262720.svg?logo=discord&colorb=blue)](https://reason-react-native.github.io/discord/)
 
-[ReasonML](https://reasonml.github.io) /
-[BuckleScript](https://bucklescript.github.io) bindings for
+[ReScript](https://rescript-lang.org) / [Reason](https://reasonml.github.io) bindings for
 [`react-native-keychain`](https://github.com/oblador/react-native-keychain).
 
 Exposed as `ReactNativeSomething` module.
 
-`@reason-react-native/keychain` X.y._ means it's compatible with
-`react-native-keychain` X.y._
+`@reason-react-native/keychain` X.y.\* means it's compatible with
+`react-native-keychain` X.y.\*
 
 ## Installation
 
@@ -26,7 +25,7 @@ yarn add @reason-react-native/keychain
 ```
 
 `@reason-react-native/keychain` should be added to `bs-dependencies` in your
-`bsconfig.json`. Something like
+`bsconfig.json`:
 
 ```diff
 {
