@@ -103,10 +103,28 @@ let decodeGetGenericPasswordResult = (result: getGenericPasswordResult) => {
   );
 };
 
+type authenticationPrompt = {
+  title: string,
+  subtitle: option(string),
+  description: option(string),
+  cancel: option(string),
+};
+
+[@bs.obj]
+external authenticationPrompt:
+  (
+    ~title: string,
+    ~subtitle: option(string)=?,
+    ~description: option(string)=?,
+    ~cancel: option(string)=?,
+    unit
+  ) =>
+  authenticationPrompt;
+
 type getGenericPasswordOptions;
 [@bs.obj]
 external getGenericPasswordOptions:
-  (~authenticationPrompt: string=?, ~service: string=?, unit) =>
+  (~authenticationPrompt: authenticationPrompt, ~service: string=?, unit) =>
   getGenericPasswordOptions;
 
 [@bs.module "react-native-keychain"]
@@ -178,3 +196,49 @@ external resetGenericPasswordWithOptions:
 [@bs.module "react-native-keychain"]
 external resetGenericPasswordWithService: string => Js.Promise.t(bool) =
   "resetGenericPassword";
+/*
+ @todo handle false | Result for promise
+
+  [@bs.module "react-native-keychain"]
+  external hasInternetCredentials: string => Js.Promise.t(bool) =
+    "hasInternetCredentials";
+
+  type setInternetCredentialsOptions;
+  [@bs.obj]
+  external setInternetCredentialsOptions:
+    (
+      ~accessControl: AccessControl.t=?,
+      ~accessGroup: string=?,
+      ~accessible: Accessible.t=?,
+      ~securityLevel: SecurityLevel.t=?,
+      unit
+    ) =>
+    setInternetCredentialsOptions;
+
+  type internetCredentials = {
+    username: string,
+    password: string,
+    service: string,
+    storage: string,
+  };
+  [@bs.module "react-native-keychain"]
+  external setInternetCredentials:
+    (string, string, string, option(setInternetCredentialsOptions)) =>
+    Js.Promise.t(internetCredentials) =
+    "setInternetCredentials";
+
+  type getInternetCredentialsOptions = {authenticationPrompt};
+  [@bs.obj]
+  external getInternetCredentialsOptions:
+    (~authenticationPrompt: authenticationPrompt=?, unit) =>
+    getInternetCredentialsOptions;
+
+  [@bs.module "react-native-keychain"]
+  external getInternetCredentials:
+    (string, option(getInternetCredentialsOptions)) => Js.Promise.t(unit) =
+    "getInternetCredentials";
+
+  [@bs.module "react-native-keychain"]
+  external resetInternetCredentials: string => Js.Promise.t(unit) =
+    "resetInternetCredentials";
+  */
