@@ -7,7 +7,7 @@
 [ReScript](https://rescript-lang.org) / [Reason](https://reasonml.github.io) bindings for
 [`react-native-keychain`](https://github.com/oblador/react-native-keychain).
 
-Exposed as `ReactNativeSomething` module.
+Exposed as `ReactNativeKeychain` module.
 
 `@reason-react-native/keychain` X.y.\* means it's compatible with
 `react-native-keychain` X.y.\*
