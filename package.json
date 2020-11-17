@@ -1,7 +1,7 @@
 {
   "name": "@reason-react-native/keychain",
+  "description": "ReScript bindings for react-native-keychain.",
   "version": "6.2.0",
-  "description": "ReScript / Reason bindings for react-native-keychain",
   "publishConfig": {
     "access": "public"
   },
