@@ -1,5 +1,9 @@
 # Changelog of `@rescript-react-native/keychain`
 
+## 6.2.1 - 2021-05-03
+
+ReScript
+
 ## 6.2.0 - 2020-11-06
 
 6.2.0 compat (but imcomplete)
