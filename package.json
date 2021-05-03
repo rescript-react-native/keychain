@@ -1,5 +1,5 @@
 {
-  "name": "@reason-react-native/keychain",
+  "name": "@rescript-react-native/keychain",
   "description": "ReScript bindings for react-native-keychain.",
   "version": "6.2.0",
   "publishConfig": {
@@ -9,22 +9,20 @@
     "react-native-keychain": "^6.2.0"
   },
   "author": "Christoph Knittel <ck@cca.io>",
-  "repository": "https://github.com/reason-react-native/keychain.git",
+  "repository": "https://github.com/rescript-react-native/keychain.git",
   "license": "MIT",
   "keywords": [
     "rescript",
-    "reason",
-    "reasonml",
-    "bucklescript",
     "react-native",
-    "reason-react-native",
+    "rescript-react-native",
     "react-native-keychain",
     "keychain"
   ],
   "files": [
     "*.md",
     "bsconfig.json",
-    "src/**/*.re",
+    "src/**/*.res",
+    "src/**/*.resi",
     "src/**/*.js",
     "!src/**/*.bs.js"
   ],
@@ -41,7 +39,7 @@
     "release": "npmpub"
   },
   "devDependencies": {
-    "bs-platform": "^8.2.0",
+    "bs-platform": "^9.0.0",
     "husky": "^4.0.0",
     "lint-staged": "^10.0.0",
     "npmpub": "^5.0.0",

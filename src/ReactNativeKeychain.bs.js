@@ -26,7 +26,7 @@ function decodeGetGenericPasswordResult(result) {
   var match = Belt_Option.map(Js_dict.get(dict$1, "service"), Js_json.classify);
   var match$1 = Belt_Option.map(Js_dict.get(dict$1, "username"), Js_json.classify);
   var match$2 = Belt_Option.map(Js_dict.get(dict$1, "password"), Js_json.classify);
-  if (match !== undefined && !(typeof match === "number" || match.TAG || !(match$1 !== undefined && !(typeof match$1 === "number" || match$1.TAG || !(match$2 !== undefined && !(typeof match$2 === "number" || match$2.TAG)))))) {
+  if (match !== undefined && !(typeof match === "number" || !(match.TAG === /* JSONString */0 && match$1 !== undefined && !(typeof match$1 === "number" || !(match$1.TAG === /* JSONString */0 && match$2 !== undefined && !(typeof match$2 === "number" || match$2.TAG !== /* JSONString */0)))))) {
     return {
             service: match._0,
             username: match$1._0,
